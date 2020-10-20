@@ -53,12 +53,13 @@ Ctrl+Shift+6
 
 **Inserir um banner de entrada**
 ```
-(config)#banner motd [mensagem]
+(config)#banner motd "[mensagem]"
 ```
 
 **Inserir senha de Enable**
 ```
-(config)#enable secret [senha]
+(config)#enable secret [senha] (Criptografada)
+(config)#enable password [senha] (Sem criptografia)
 ```
 
 **Inserir senha na console**
