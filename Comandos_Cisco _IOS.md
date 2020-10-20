@@ -51,11 +51,6 @@ Ctrl+Shift+6
 (config)#hostname [nome]
 ```
 
-**Mudar nome do equipamentos**
-```
-(config)#hostname [nome]
-```
-
 **Inserir um banner de entrada**
 ```
 (config)#banner motd [mensagem]
