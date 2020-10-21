@@ -84,3 +84,10 @@ Exemplo: no hostname SW-01 --> (Apagar o nome configurado no Switch)
 ```
 Ctrl+Z
 ```
+
+**Mostrar a tabela MAC do Switch**
+```
+#show mac-address-table (IOS 12.2)
+
+#show mac address-table (IOS 15.0)
+```
