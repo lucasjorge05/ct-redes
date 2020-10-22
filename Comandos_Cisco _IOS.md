@@ -22,7 +22,9 @@ Esse são os comandos utilizados em sala de aula, USE como consulta caso esteja 
 **Salvas as configurações que estão do equipamentos**
 ```
 #copy running-config startup-config
+ou
 #write memory
+ou
 #wr
 ```
 
