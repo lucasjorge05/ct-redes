@@ -91,7 +91,7 @@ Ctrl+Z
 ```
 #show mac-address-table (IOS 12.2)
 
-#show mac address-table (IOS 15.0)
+#show mac address-table dynamic (IOS 15.0)
 ```
 
 ## Configurações de VLAN
