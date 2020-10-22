@@ -91,3 +91,35 @@ Ctrl+Z
 
 #show mac address-table (IOS 15.0)
 ```
+
+## Configurações de VLAN
+
+**Criar e definir um nome para uma VLAN**
+```
+(config)#vlan [id-da-vlan]
+(config-vlan)#name [nome-da-vlan]
+```
+
+**Atrelar uma VLAN a uma interface**
+```
+(config)#interface [id-da-interface]
+(config-if)#switchport mode access
+(config-if)#switchport access vlan [id-da-vlan]
+```
+
+**Exibir um resumo das VLANs presentes no dispositivo e as interfaces atreladas as VLANs**
+```
+#show vlan brief
+```
+
+**Exibir informações sobre uma VLAN específica**
+```
+#show vlan id [id-da-vlan]
+ou
+#show vlan name [nome-da-vlan]
+```
+
+**Exibir informações relacionadas a VLAN em um interface específica**
+```
+#show interface [id-da-interface] switchport
+```
