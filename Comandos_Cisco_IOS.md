@@ -94,6 +94,16 @@ Ctrl+Z
 #show mac address-table dynamic (IOS 15.0)
 ```
 
+**Ver arquivos na memória Flash**
+```
+#dir flash
+```
+
+**Ver arquivos na memória NVRAM**
+```
+#dir nvram
+```
+
 ## Configurações de VLAN
 
 **Criar e definir um nome para uma VLAN**
@@ -124,16 +134,6 @@ ou
 **Exibir informações relacionadas a VLAN em um interface específica**
 ```
 #show interface [id-da-interface] switchport
-```
-
-**Ver arquivos na memória Flash**
-```
-#dir flash
-```
-
-**Ver arquivos na memória NVRAM**
-```
-#dir nvram
 ```
 
 **Deletar arquivo vlan.dat**
