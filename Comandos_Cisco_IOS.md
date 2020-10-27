@@ -124,6 +124,14 @@ Ctrl+Z
 (config-if)#switchport access vlan [id-da-vlan]
 ```
 
+**Configurar o Trunk em uma interface**
+```
+(config)#interface [id-da-interface]
+(config-if)#switchport mode trunk
+(config-if)#switchport trunk native vlan [id-da-vlan_nativa]
+(config-if)#switchport trunk allowed vlan [id-das-vlans (separado por vírgula)]
+```
+
 **Exibir um resumo das VLANs presentes no dispositivo e as interfaces atreladas as VLANs**
 ```
 #show vlan brief
