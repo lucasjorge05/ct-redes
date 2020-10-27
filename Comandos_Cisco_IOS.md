@@ -104,6 +104,11 @@ Ctrl+Z
 #dir nvram
 ```
 
+**Desativar a paginação (--MORE--)**
+```
+#terminal length 0
+```
+
 ## Configurações de VLAN
 
 **Criar e definir um nome para uma VLAN**
@@ -139,9 +144,4 @@ ou
 **Deletar arquivo vlan.dat**
 ```
 #delete vlan.dat
-```
-
-**Desativar a paginação (--MORE--)**
-```
-#terminal length 0
 ```
