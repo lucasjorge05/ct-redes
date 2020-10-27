@@ -140,3 +140,8 @@ ou
 ```
 #delete vlan.dat
 ```
+
+**Desativar a paginação (--MORE--)**
+```
+#terminal length 0
+```
