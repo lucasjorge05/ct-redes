@@ -108,6 +108,17 @@ Ctrl+Z
 ```
 #terminal length 0
 ```
+**Desativar as mensagens de erro na tela**
+```
+(config)#no logging console
+```
+
+**Configurar várias Interfaces ao mesmo tempo**
+
+**Exemplo**: Configurar todas as interfaces entre a f0/1 e a f0/5
+```
+(config)#interface range f0/1-5
+```
 
 ## Configurações de VLAN
 
