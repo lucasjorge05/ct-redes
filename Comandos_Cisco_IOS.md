@@ -2,7 +2,7 @@
 
 Esse são os comandos utilizados em sala de aula, USE como consulta caso esteja em dúvida em alguma configuração.
 
-## Configurações Iniciais
+## Configurações Iniciais (Switch e Router)
 
 **Entrar no modo Exec Privilegiado**
 ```
@@ -61,6 +61,7 @@ Ctrl+Shift+6
 **Inserir senha de Enable**
 ```
 (config)#enable secret [senha] (Criptografada)
+
 (config)#enable password [senha] (Sem criptografia)
 ```
 
@@ -118,6 +119,32 @@ Ctrl+Z
 **Exemplo**: Configurar todas as interfaces entre a f0/1 e a f0/5
 ```
 (config)#interface range f0/1-5
+```
+
+## Configurações do Switch
+
+**Configurar endereço IP em um Switch**
+```
+(config)#interface vlan [id-da-vlan-de-gerenciamento]
+(config-if)#ip address [endereço-ip] [máscara (em decimal)]
+```
+**Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch não vai ativar o endereço IP**
+
+**Configurar o Gateway Padrão no Switch**
+```
+(config)#ip default-gateway [ip-do-gateway]
+```
+
+## Configurações do Roteador
+
+**Configurar IP em uma Interface**
+```
+(config-if)#ip address [endereço-ip] [máscara (em decimal)]
+```
+
+**Exibir a tabela de roteamento**
+```
+#show ip route
 ```
 
 ## Configurações de VLAN
