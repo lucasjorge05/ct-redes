@@ -127,8 +127,9 @@ Ctrl+Z
 ```
 (config)#interface vlan [id-da-vlan-de-gerenciamento]
 (config-if)#ip address [endereço-ip] [máscara (em decimal)]
+
+Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch não vai ativar o endereço IP
 ```
-**Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch não vai ativar o endereço IP**
 
 **Configurar o Gateway Padrão no Switch**
 ```
