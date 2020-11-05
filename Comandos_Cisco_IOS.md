@@ -85,7 +85,9 @@ Exemplo: no hostname SW-01 --> (Apagar o nome configurado no Switch)
 
 **Voltar para a tela de EXEC-Privilegiado**
 ```
-Ctrl+Z
+Atalho no Teclado: Ctrl+Z
+ou
+Comando: end
 ```
 
 **Mostrar a tabela MAC do Switch**
