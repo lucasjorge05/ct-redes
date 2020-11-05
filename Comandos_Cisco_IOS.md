@@ -121,6 +121,16 @@ Ctrl+Z
 (config)#interface range f0/1-5
 ```
 
+**Mostrar resumo das interfaces do Equipamento**
+```
+#show ip interface brief
+```
+
+**Inserir uma descrição em uma Interface**
+```
+(config-if)#description [texto-da-descrição]
+```
+
 ## Configurações do Switch
 
 **Configurar endereço IP em um Switch**
