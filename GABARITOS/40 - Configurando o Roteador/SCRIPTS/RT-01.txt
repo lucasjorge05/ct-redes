@@ -1,0 +1,25 @@
+enable
+conf t
+hostname RT-01
+
+!Inserir endereço IP na Interface GigabitEthernet 0/0
+interface g0/0
+ip address 192.168.0.1 255.255.255.0
+!Inserir um descrição na interface
+description INTERFACE UTILIZADA COMO GATEWAY NA REDE RH
+!Ativa a interface
+no shutdown
+
+!Inserir endereço IP na Interface GigabitEthernet 0/0
+interface g0/1
+ip address 172.16.0.1 255.255.0.0
+!Inserir um descrição na interface
+description INTERFACE UTILIZADA COMO GATEWAY NA REDE ADM
+!Ativa a interface
+no shutdown
+
+!Ir diretamente para o modo EXEC-Privilegiado
+end
+
+!Salvar as configurações
+wr
