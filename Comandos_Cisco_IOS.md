@@ -131,6 +131,16 @@ Ctrl+Z
 (config-if)#description [texto-da-descrição]
 ```
 
+**Desativar uma interface**
+```
+(config-if)#shutdown
+```
+
+**Ativar uma Interface**
+```
+(config-if)#no shutdown
+```
+
 ## Configurações do Switch
 
 **Configurar endereço IP em um Switch**
