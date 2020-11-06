@@ -143,6 +143,32 @@ Comando: end
 (config-if)#no shutdown
 ```
 
+**Definir nome do domínio no dispositivo**
+```
+(config)#ip domain-name [nome-do-domínio]
+```
+
+**Gerar chave de criptografia**
+```
+(config)#crypto key generate rsa general-key modulus [tamanho-da-chave-em-bits]
+```
+
+**Criar usuário local**
+```
+(config)#username [nome-do-usuário] privilege [nível-de-privilégio] secret [senha-do-usuário]
+```
+
+**Configurar acesso via SSH em todas as linhas VTY**
+```
+(config)line vty 0 15
+(config-line)transport input ssh
+```
+
+**Ativar o login com usuário e senha local (funciona para as linhas de Console e VTY)**
+```
+(config-line)#login local
+```
+
 ## Configurações do Switch
 
 **Configurar endereço IP em um Switch**
@@ -161,7 +187,7 @@ Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch n
 
 ## Configurações do Roteador
 
-**Configurar IP em uma Interface**
+**Configurar IP em uma Interface ou Subinterface**
 ```
 (config-if)#ip address [endereço-ip] [máscara (em decimal)]
 ```
@@ -169,6 +195,29 @@ Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch n
 **Exibir a tabela de roteamento**
 ```
 #show ip route
+```
+
+**Criação de Subinterface e atrelamento dela a uma VLAN**
+
+Para configurar uma Subinterface, basta colocar um **ponto** no final do nome da Interface onde você quer criar a **Subinterface**, após o ponto digite o **ID da Subinterface**, lembrando que o **ID da Subinterface** normalmente é o **ID da VLAN** a qual essa Subinterface será atrelada.
+
+No exemplo abaixo vamos criar a **Subinterface .10** na **Interface g0/0** e atrelar ela a **VLAN 10**
+
+```
+(config)#interface g0/0.10
+(config-if)#encapsulation dot1q 10
+```
+
+**Definir um tamanho mínimo de senha para os usuários locais**
+```
+(config)#security password min-length [tamanho-mínimo]
+```
+
+**Bloquear acesso de um usuário, após muitas tentativas de acesso**
+```
+Exemplo: Bloquear um usuário por 30 Segundos, caso ele erre a senha 3 vezes, em um período de 60 segundos
+
+(config)#login block-for 30 attempts 3 within 60 
 ```
 
 ## Configurações de VLAN
