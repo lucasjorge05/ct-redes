@@ -149,6 +149,7 @@ Comando: end
 ```
 (config)#interface vlan [id-da-vlan-de-gerenciamento]
 (config-if)#ip address [endereço-ip] [máscara (em decimal)]
+(config-if)#no shutdown
 
 Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch não vai ativar o endereço IP
 ```
