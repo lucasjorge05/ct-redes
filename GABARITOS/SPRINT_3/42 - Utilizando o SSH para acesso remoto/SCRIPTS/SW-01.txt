@@ -1,0 +1,31 @@
+enable
+configure terminal
+hostname SW-01
+
+!definir senha de Enable
+enable secret SenhaSecreta
+
+!Definir um nome de domínio para ser usado no SSH
+ip domain-name aula41.local
+
+!Gerar a chave de SSH
+crypto key generate rsa general-key modulus 1024
+
+!Criar usuário local, o qual terá acesso ao Switch via SSH
+username suporte privilege 15 secret suporte@123
+
+!Configurar o SSH em todas as linhas de VTY
+line vty 0 15
+transport input ssh
+login local
+exit
+
+!Configurar o endereço IP no Switch
+interface vlan 1
+ip address 172.16.255.254 255.255.0.0
+no shutdown
+exit
+
+!Salvar as configurações
+end
+wr
