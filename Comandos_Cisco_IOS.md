@@ -220,6 +220,20 @@ Exemplo: Bloquear um usuário por 30 Segundos, caso ele erre a senha 3 vezes, em
 (config)#login block-for 30 attempts 3 within 60 
 ```
 
+**Criar Rota Estática**
+```
+(config)# ip route [rede-de-destino] [máscara-da-rede-de-destino] [interface-de-saída]
+
+ou
+
+(config)# ip route [rede-de-destino] [máscara-da-rede-de-destino] [ip-do-roteador-que-conhece-a-rede]
+```
+
+**Configurar Rota Padrão**
+```
+(config)# ip route 0.0.0.0 0.0.0.0 [ip-de-último-recurso]
+```
+
 ## Configurações de VLAN
 
 **Criar e definir um nome para uma VLAN**
