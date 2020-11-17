@@ -197,6 +197,16 @@ Lembrando que você deve criar a VLAN de Gerenciamento, do contrário o Switch n
 (config-if)#ip address [endereço-ip] [máscara (em decimal)]
 ```
 
+**Configurar IPv6 em uma Interface ou Subinterface**
+```
+(config-if)#ipv6 address [endereço-ip]/[prefixo]
+```
+
+**Configurar IPv6 Link Local em uma Interface ou Subinterface**
+```
+(config-if)#ipv6 address [endereço-ip]/[prefixo] link-local
+```
+
 **Exibir a tabela de roteamento**
 ```
 #show ip route
