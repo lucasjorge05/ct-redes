@@ -169,6 +169,11 @@ Comando: end
 (config-line)#login local
 ```
 
+**Desativar tradução de nome**
+```
+(config)#no ip domain-lookup
+```
+
 ## Configurações do Switch
 
 **Configurar endereço IP em um Switch**
@@ -232,6 +237,20 @@ ou
 **Configurar Rota Padrão**
 ```
 (config)# ip route 0.0.0.0 0.0.0.0 [ip-de-último-recurso]
+```
+
+**Configurar Rota Estática IPv6**
+```
+(config)# ipv6 route [rede-de-destino]/[prefixo] [ip-do-roteador-que-conhece-a-rede]
+
+ou
+
+(config)# ipv6 route [rede-de-destino]/[prefixo] [interface-de-saída]
+```
+
+**Configurar Rota Padrão IPv6**
+```
+(config)# ipv6 route ::/0 [ip-de-último-recurso]
 ```
 
 ## Configurações de VLAN
