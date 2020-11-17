@@ -237,30 +237,35 @@ Exemplo: Bloquear um usuário por 30 Segundos, caso ele erre a senha 3 vezes, em
 
 **Criar Rota Estática**
 ```
-(config)# ip route [rede-de-destino] [máscara-da-rede-de-destino] [interface-de-saída]
+(config)#ip route [rede-de-destino] [máscara-da-rede-de-destino] [interface-de-saída]
 
 ou
 
-(config)# ip route [rede-de-destino] [máscara-da-rede-de-destino] [ip-do-roteador-que-conhece-a-rede]
+(config)#ip route [rede-de-destino] [máscara-da-rede-de-destino] [ip-do-roteador-que-conhece-a-rede]
 ```
 
 **Configurar Rota Padrão**
 ```
-(config)# ip route 0.0.0.0 0.0.0.0 [ip-de-último-recurso]
+(config)#ip route 0.0.0.0 0.0.0.0 [ip-de-último-recurso]
 ```
 
 **Configurar Rota Estática IPv6**
 ```
-(config)# ipv6 route [rede-de-destino]/[prefixo] [ip-do-roteador-que-conhece-a-rede]
+(config)#ipv6 route [rede-de-destino]/[prefixo] [ip-do-roteador-que-conhece-a-rede]
 
 ou
 
-(config)# ipv6 route [rede-de-destino]/[prefixo] [interface-de-saída]
+(config)#ipv6 route [rede-de-destino]/[prefixo] [interface-de-saída]
 ```
 
 **Configurar Rota Padrão IPv6**
 ```
-(config)# ipv6 route ::/0 [ip-de-último-recurso]
+(config)#ipv6 route ::/0 [ip-de-último-recurso]
+```
+
+**Habilitar Roteamento IPv6**
+```
+(config)#ipv6 unicast-routing
 ```
 
 ## Configurações de VLAN
