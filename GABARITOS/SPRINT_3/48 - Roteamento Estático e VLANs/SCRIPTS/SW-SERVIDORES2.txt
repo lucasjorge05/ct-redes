@@ -1,0 +1,32 @@
+enable
+conf t
+hostname SW-SERVIDORES2
+enable secret triforce-s2
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!"
+username ganon privilege 15 secret hey-listen3*
+ip domain-name ganondorf.local 
+crypto key generate rsa general-keys modulus 1024
+line vty 0 15
+transport input ssh
+login local
+exit
+line console 0
+login local
+exit
+vlan 50
+name SERVIDORES
+exit
+interface f0/1
+switchport mode access
+switchport access vlan 50
+interface f0/23
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 50,99
+interface range f0/2-22
+shutdown
+interface f0/24
+shutdown
+interface range g0/1-2
+shutdown
+do wr

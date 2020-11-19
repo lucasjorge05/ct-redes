@@ -1,0 +1,203 @@
+<p>Voc&ecirc; foi contratado para configurar a conex&atilde;o entre duas redes distintas da empresa Ganondorf .Inc.</p>
+<p>A empresa tem duas filiais, uma em Minas Gerais e outra no Paran&aacute;.</p>
+<hr />
+<p>&nbsp;Cada filial tem seu esquema de VLAN, seguindo as tabelas abaixo:</p>
+<p><strong>REDE - MG</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>VLAN</strong></td>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>REDE</strong></td>
+<td style="text-align: center;"><strong>M&Aacute;SCARA</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td>USUARIOS</td>
+<td>172.16.0.0</td>
+<td>/24</td>
+</tr>
+<tr>
+<td>50</td>
+<td>SERVIDORES</td>
+<td>172.16.1.0</td>
+<td>/24</td>
+</tr>
+<tr>
+<td>99</td>
+<td>NATIVA</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>REDE - PR</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>VLAN</strong></td>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>REDE</strong></td>
+<td style="text-align: center;"><strong>M&Aacute;SCARA</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td>USUARIOS</td>
+<td>172.16.2.0</td>
+<td>/24</td>
+</tr>
+<tr>
+<td>50</td>
+<td>SERVIDORES</td>
+<td>172.16.3.0</td>
+<td>/24</td>
+</tr>
+<tr>
+<td>99</td>
+<td>NATIVA</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>&nbsp;Voc&ecirc; deve seguir as seguinte tabela de roteamento:</p>
+<p><strong>REDE - MG</strong></p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>IP</strong></td>
+<td style="text-align: center;"><strong>VLAN</strong></td>
+</tr>
+<tr>
+<td>PC-01</td>
+<td>5&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td>10</td>
+</tr>
+<tr>
+<td>PC-02</td>
+<td>10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td>10</td>
+</tr>
+<tr>
+<td>SRV-01</td>
+<td>2&ordm; V&Aacute;LIDO DA REDE</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<p>O roteador deve ser configurado utilizando o m&eacute;todo de Router-on-a-Stick, para fornecer roteamento para todas as VLANs, utilizando a seguinte tabela</p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>SUBINTERFACE</strong></td>
+<td style="text-align: center;"><strong>VLAN</strong></td>
+<td style="text-align: center;"><strong>IP</strong></td>
+</tr>
+<tr>
+<td>RT-01</td>
+<td>g0/0.10</td>
+<td>10</td>
+<td>172.16.0.1</td>
+</tr>
+<tr>
+<td>RT-01</td>
+<td>g0/0.50</td>
+<td>50</td>
+<td>172.16.1.1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>REDE - MG</strong></p>
+<table border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="height: 13px; text-align: center;"><strong>NOME</strong></td>
+<td style="height: 13px; text-align: center;"><strong>IP</strong></td>
+<td style="height: 13px; text-align: center;"><strong>VLAN</strong></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-03</td>
+<td style="height: 13px;">5&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px;">10</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-04</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px;">10</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">SRV-02</td>
+<td style="height: 13px;">2&ordm; V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px;">50</td>
+</tr>
+</tbody>
+</table>
+<p>O roteador deve ser configurado utilizando o m&eacute;todo de Router-on-a-Stick, para fornecer roteamento para todas as VLANs, utilizando a seguinte tabela</p>
+<table border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="height: 13px; text-align: center;"><strong>NOME</strong></td>
+<td style="height: 13px; text-align: center;"><strong>SUBINTERFACE</strong></td>
+<td style="height: 13px; text-align: center;"><strong>VLAN</strong></td>
+<td style="height: 13px; text-align: center;"><strong>IP</strong></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">RT-02</td>
+<td style="height: 13px;">g0/0.10</td>
+<td style="height: 13px;">10</td>
+<td style="height: 13px;">172.16.2.1</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">RT-02</td>
+<td style="height: 13px;">g0/0.50</td>
+<td style="height: 13px;">50</td>
+<td style="height: 13px;">172.16.3.1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>&nbsp;Os dois roteadores est&atilde;o se comunicando utilizando uma conex&atilde;o WAN Serial, seguindo o seguinte endere&ccedil;amento:</p>
+<p>REDE WAN - 200.200.100.0/30</p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>INTERFACE</strong></td>
+<td style="text-align: center;"><strong>IP</strong></td>
+</tr>
+<tr>
+<td>RT-01</td>
+<td>s0/0/0</td>
+<td>1&ordm; IP V&Aacute;LIDO DA REDE</td>
+</tr>
+<tr>
+<td>RT-02</td>
+<td>s0/0/0</td>
+<td>2&ordm; IP V&Aacute;LIDO DA REDE</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>&nbsp;Nos Switches e Roteadores, voc&ecirc; deve configurar as seguintes informa&ccedil;&otilde;es:</p>
+<ul>
+<li>Hostname</li>
+<li>Senha de Enable:&nbsp;triforce-s2</li>
+<li>Banner: ACESSO APENAS PARA PESSOAS AUTORIZADAS!</li>
+<li>Criar usu&aacute;rio e senha local:<br />
+<ul>
+<li>User:&nbsp;ganon</li>
+<li>Senha: hey-listen3*</li>
+<li>Privilege: 15</li>
+</ul>
+</li>
+<li>Dom&iacute;nio: ganondorf.local</li>
+<li>Gerar a chave de criptografia com 1024 bits</li>
+<li>Acesso remoto utilizando o SSH utilizando o usu&aacute;rio local nas linhas de VTY (0 &agrave; 15)</li>
+<li>Ativar o login local na Console</li>
+<li><strong>DESATIVAR TODAS AS INTERFACES QUE N&Atilde;O EST&Atilde;O EM USO!&nbsp;</strong></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

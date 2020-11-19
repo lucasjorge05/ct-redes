@@ -1,0 +1,24 @@
+enable
+conf t
+hostname RT-01
+
+!Configurar os IPs nas Interfaces do Router
+int g0/0
+ip add 192.168.0.1 255.255.255.0
+no shut
+int s0/0/0
+ip add 200.100.0.1 255.255.255.252
+no shut
+int s0/0/1
+ip add 150.200.0.1 255.255.255.252
+no shut
+exit
+
+!Criar rota estática para a rede 172.16.0.0/16, apontando para o IP do RT-02
+ip route 172.16.0.0 255.255.0.0 200.100.0.2
+
+!Criar Rota Padrão apontando para o IP utilizado na Nuvem
+ip route 0.0.0.0 0.0.0.0 150.200.0.2
+
+end
+wr
