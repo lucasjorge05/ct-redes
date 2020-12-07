@@ -24,4 +24,4 @@ grep - Filtrar informações específicas de um arquivo (quando usado com o |)
 Comandos Avançados
     useradd - https://www.tecmint.com/add-users-in-linux/
     groupadd
-    usermod
+    usermod - https://www.tecmint.com/usermod-command-examples/
