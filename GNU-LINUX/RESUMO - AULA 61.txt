@@ -1,0 +1,16 @@
+mkdir - Cria uma pasta
+touch - Criar Arquivos Vazio
+rm - Apagar Arquivos
+rm -r - Apagar Pastas
+find [ONDE-PESQUISAR] -name [NOME-DO-ARQUIVO-OU-PASTA]
+cp [ORIGEM] [DESTINO] (Copia Arquivos)
+cp -r [ORIGEM] [DESTINO] (Copia Pastas)
+mv [ORIGEM] [DESTINO] (Move Arquivos e Pastas)
+
+Pesquisar
+    Expressões Regulares
+    Renomear arquivos com "mv"
+    Comandos: grep e tail
+    Ver informações de Hardware (RAM, CPU e etc.) igual o Gerenciador de Tarefas do Windows
+    Ver espaço disponível em disco
+    Criar estrutura da atividade da AULA 61 com um comando
