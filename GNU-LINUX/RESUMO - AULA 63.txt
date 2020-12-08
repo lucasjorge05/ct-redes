@@ -2,8 +2,6 @@ chown - Troca o usuário dono da pasta/arquivo
 chgrp - Troca o grupo dono da pasta/arquivo
 chmod - Troca as permissões	de pasta/arquivo
 
-ls -lR - Lista os diretórios e Subdiretórios
-
 chgrp [grupo] [pasta/arquivo]
 chown [usuario] [pasta/arquivo]
 chmod [permissao] [pasta/arquivo]
@@ -38,6 +36,9 @@ Permissões
                 7           111            rwx
 	       ---------------------------------------
 
+Comandos complementares
+	ls -lR - Lista os diretórios e Subdiretórios
+	
 Pesquisar
     Como trocar as permissões das subpastas?
     Como trocar o usuário e grupo de uma pasta de uma vez?
