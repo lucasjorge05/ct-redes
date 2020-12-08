@@ -1,0 +1,20 @@
+conf t
+vlan 50
+name SERVIDORES
+vlan 60
+name GERENCIAMENTO
+int f0/22
+switchport trunk allowed vlan 10,20,30,40,50,60,99
+exit
+ip domain-name coloniamarciana.local
+crypto key generate rsa general-key modulus 1024
+username suporte-marte privilege 15 secret suporte@123
+line vty 0 15
+transport input ssh
+login local
+line console 0
+login local
+interface vlan 60
+ip add 192.168.0.235 255.255.255.240
+no shutdown
+do wr

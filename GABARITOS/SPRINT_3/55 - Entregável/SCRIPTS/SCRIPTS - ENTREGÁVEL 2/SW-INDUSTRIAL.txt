@@ -1,0 +1,26 @@
+enable
+conf t
+hostname SW-INDUSTRIAL
+line console 0
+password TI*Marte2077
+login
+exit
+enable secret SenhaMarciana7702
+banner motd "ACESSO AUTORIZADO APENAS PARA O DEPARTAMENTO DE TI DA COLONIA MARCIANA!"
+service password-encryption
+vlan 10
+name CONTROLE
+vlan 20
+name ESTUFA
+vlan 30
+name INDUSTRIAL
+vlan 40
+name TERRA
+int range f0/1-2
+switchport mode access
+switchport access vlan 30
+int f0/22
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,30,40,99
+do wr
