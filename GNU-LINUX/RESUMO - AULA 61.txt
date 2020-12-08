@@ -14,3 +14,7 @@ Pesquisar
     Ver informações de Hardware (RAM, CPU e etc.) igual o Gerenciador de Tarefas do Windows
     Ver espaço disponível em disco
     Criar estrutura da atividade da AULA 61 com um comando
+
+Referências
+    https://www.youtube.com/watch?v=SZMIL87CyVE&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n
+    https://www.youtube.com/watch?v=Yvg7RAhq1Ss&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n&index=13

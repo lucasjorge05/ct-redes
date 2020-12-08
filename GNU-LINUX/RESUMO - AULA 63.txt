@@ -1,0 +1,46 @@
+chown - Troca o usuário dono da pasta/arquivo
+chgrp - Troca o grupo dono da pasta/arquivo
+chmod - Troca as permissões	de pasta/arquivo
+
+ls -lR - Lista os diretórios e Subdiretórios
+
+chgrp [grupo] [pasta/arquivo]
+chown [usuario] [pasta/arquivo]
+chmod [permissao] [pasta/arquivo]
+
+Permissões
+    d     rwx        rwx      rwx
+       U[suario]   G[rupo]   O[utros]
+    r - read
+    w - write
+    x - execute
+
+    desenvolvimento - d rwx r-x r-x [Permissão antiga]
+                        111 101 101
+                         7   5   5
+    desenvolvimento - d rwx rwx r-x [Permissão nova]
+                        111 111 101
+                         7   7   5
+
+    Permissão para as pastas do Exercício -   7   0   0
+                                             rwx --- ---
+
+	       ---------------------------------------
+	        número    binário equiv.   permissões
+	       ---------------------------------------
+                0           000            ---
+                1           001            --x
+                2           010            -w-
+                3           011            -wx
+                4           100            r--
+                5           101            r-x
+                6           110            rw-
+                7           111            rwx
+	       ---------------------------------------
+
+Pesquisar
+    Como trocar as permissões das subpastas?
+    Como trocar o usuário e grupo de uma pasta de uma vez?
+
+Referências
+    https://www.youtube.com/watch?v=CeeNPDMUntA&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n&index=25

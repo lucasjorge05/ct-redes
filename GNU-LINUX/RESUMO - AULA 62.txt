@@ -25,3 +25,6 @@ Comandos Avançados
     useradd - https://www.tecmint.com/add-users-in-linux/
     groupadd
     usermod - https://www.tecmint.com/usermod-command-examples/
+
+Referências
+    https://www.youtube.com/watch?v=MNT6V9Mf4cI&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n&index=24
