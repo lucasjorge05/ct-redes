@@ -40,8 +40,9 @@ Comandos complementares
 	ls -lR - Lista os diretórios e Subdiretórios
 	
 Pesquisar
-    Como trocar as permissões das subpastas?
-    Como trocar o usuário e grupo de uma pasta de uma vez?
+    Como eu troco os grupos das subpastas de uma vez?
+    Como eu troco as permissões das subpastas de uma vez?
+    Como eu troco o usuário dono da pasta e o grupo do da pasta de uma vez?
 
 Referências
     https://www.youtube.com/watch?v=CeeNPDMUntA&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n&index=25
