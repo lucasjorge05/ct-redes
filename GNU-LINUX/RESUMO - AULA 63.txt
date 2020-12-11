@@ -41,8 +41,11 @@ Comandos complementares
 	
 Pesquisar
     Como eu troco os grupos das subpastas de uma vez?
+        chgrp -R
     Como eu troco as permissões das subpastas de uma vez?
+        chmod -R
     Como eu troco o usuário dono da pasta e o grupo do da pasta de uma vez?
+        chown usuario:grupo [pasta/arquivo]
 
 Referências
     https://www.youtube.com/watch?v=CeeNPDMUntA&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n&index=25
