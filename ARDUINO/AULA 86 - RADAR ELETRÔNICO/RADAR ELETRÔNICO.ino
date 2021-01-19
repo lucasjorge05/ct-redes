@@ -25,6 +25,7 @@ void loop(){
     velocidade_permitida = 30;
 
     //Exibe a velocidade permitida na via
+     Serial.println("");
     Serial.print("A velocidade permitida na via e: ");
     Serial.print(velocidade_permitida);
     Serial.println(" km/h");
@@ -33,7 +34,6 @@ void loop(){
     if(velocidade_veiculo>velocidade_permitida) {
 
         Serial.println("Voce está acima da velocidade permitida!");
-        Serial.println("");
 
         //Pisca o LED Vermelho com um intervalo de 0,5 segundos
         digitalWrite(2,HIGH);
@@ -44,8 +44,7 @@ void loop(){
     } else {
         
         Serial.println("Voce está dentro da velocidade permitida!");
-        Serial.println("");
-
+        
         //Pisca o LED Verde com um intervalo de 0,5 segundos
         digitalWrite(3,HIGH);
         delay(500);
