@@ -1,5 +1,4 @@
 
-
 // TIPOS DE VARIÁVEIS......
 
 bool var;   // valores verdadeiros ou falsos
